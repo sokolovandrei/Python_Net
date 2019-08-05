@@ -1,0 +1,11 @@
+Value Required ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Required AGE (\S+)
+Value Required MAC (\S+)
+Value Required TYPE (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^Address\s+Age\s+Hardware Addr\s+Type\s+Interface
+  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE}\s+${INTERFACE} -> Record
+  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE} -> Record
+ # ^. -> Error	
